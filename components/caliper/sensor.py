@@ -17,7 +17,7 @@ CONFIG_SCHEMA = sensor.sensor_schema(
         accuracy_decimals=2,
     ).extend({
         cv.GenerateID(): cv.declare_id(CaliperSensor),
-    }).extend(cv.polling_component_schema('25ms'))
+    }).extend(cv.polling_component_schema('250ms'))
 
 
 async def to_code(config):
@@ -25,3 +25,4 @@ async def to_code(config):
     await cg.register_component(var, config)
 
     await sensor.register_sensor(var, config)
+
