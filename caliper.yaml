@@ -1,8 +1,10 @@
 esphome:
   name: caliper
 
-esp8266:
-  board: esp12e
+esp32:
+  board: esp32dev
+  framework:
+    type: arduino ##does not work with esp-idf
 
 api:
 ota:
@@ -22,3 +24,4 @@ external_components:
 sensor:
   - platform: caliper
     name: Caliper
+    id: caliper_reading
