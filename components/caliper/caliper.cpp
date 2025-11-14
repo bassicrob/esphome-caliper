@@ -2,8 +2,8 @@
 #include "esphome/core/log.h"
 #include "caliper.h"
 
-#define CLOCK_PIN D6
-#define DATA_PIN  D5
+#define CLOCK_PIN 16
+#define DATA_PIN  17
 
 #define MILLIS_BETWEEN_PACKETS 100
 
@@ -89,4 +89,5 @@ void CaliperSensor::update() {
 }
 
 }
+
 }
